@@ -67,7 +67,7 @@
 * Lägg till script längst ned i ```<body>```
 * Prova t.ex. att sända ```button.classList.remove('css_off')``` i konsolen
 
-```javascript
+```html
 <script>
   function postData(){
     const myButton = document.querySelector("#button")
