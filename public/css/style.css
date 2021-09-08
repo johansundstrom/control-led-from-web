@@ -1,0 +1,20 @@
+#button {
+  cursor: pointer;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 32px;
+}
+
+#center {
+  text-align: center;
+}
+
+.css_on {
+  background-color: green;
+  color: white;
+}
+
+.css_off {
+  background-color: red;
+  color: black;
+}
