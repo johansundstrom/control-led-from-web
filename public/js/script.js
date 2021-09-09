@@ -3,6 +3,7 @@ async function postData(){
   let myData = {}; 
   const button = document.querySelector("#button");
 
+  //   datalast
   if (button.classList.contains('css_off')) {
     myData = { state: 'ON' };
   } else {
@@ -11,7 +12,8 @@ async function postData(){
     
   let epoch = new Date().getTime();
   myData.clientEpoch = epoch;
-
+  //   /datalast
+  
   const options = {
     method: 'POST',
     mode: 'cors',

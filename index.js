@@ -8,14 +8,13 @@ const options = {
   limit: '10kb', 
   type: 'application/json'
 };
-app.use(express.json(options));
+app.use(express.json(options));   //http://expressjs.com/en/api.html#express.json
 
-//serve static assets from 'public'
-app.use(express.static('public'));
+//serve static assets from 'public' as root 
+app.use(express.static('public'));  //http://expressjs.com/en/api.html#express.static
 
 //Routes HTTP POST requests to the specified path och callback
 app.post('/api', (request, response) => {
-  //middleware
   const data = request.body;
   console.log(data);
 
