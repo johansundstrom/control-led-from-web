@@ -24,6 +24,7 @@ app.post('/api', (request, response) => {
   //Make and send JSON response to client
   const res = { 
     state: data.state,
+    serverEpoch: serverEpoch,
     roundTrip: serverEpoch - data.clientEpoch + 'mS'
   }
   response.json(res);
