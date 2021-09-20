@@ -14,6 +14,7 @@ async function postData(){
   myData.clientEpoch = epoch;
   //   /datalast
   
+ //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
   const options = {
     method: 'POST',
     mode: 'cors',
@@ -23,11 +24,12 @@ async function postData(){
 
   const response = await fetch('/api', options);
   const jsonData = await response.json();
+  
   console.log(jsonData);
 
-  if (button.classList.contains('css_off')) {
-    button.classList.remove('css_off');
-    button.classList.add('css_on');
+  if (jsonData.state == 'ON') {
+    button.classList.toggle('css_off');   
+    button.classList.toggle('css_on');
     button.innerHTML = 'LED ON';
   } else {
     button.classList.remove('css_on');
