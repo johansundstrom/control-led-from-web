@@ -8,7 +8,7 @@ async function postData() {
   const button = document.querySelector("#button");
 
   if (location.host == 'cryptic-meadow-42908.herokuapp.com') {
-    host = 'Region: United States'
+    host = 'host in United States'
   } else {
     host = 'Localhost';
   }
