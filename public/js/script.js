@@ -2,13 +2,13 @@
 
 let myData = { state: 'OFF' };
 
-async function postData(){
+async function postData() {
 
   const button = document.querySelector("#button");
 
-  button.classList.remove('css_off', 'css_on'); 
-  //button.classList.remove('css_on');
-  button.classList.add('css_wait');  
+  button.classList.remove('css_off', 'css_on');
+  button.classList.add('css_wait');
+  button.innerHTML = 'WAIT';
 
   //   datalast
   if (myData.state == 'OFF') {
@@ -16,14 +16,14 @@ async function postData(){
   } else {
     myData = { state: 'OFF' };
   }
-    
+
   let epoch = new Date().getTime();
   myData.clientEpoch = epoch;
   //   /datalast
 
   console.log(myData.state);
-  
- //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+  //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
   const options = {
     method: 'POST',
     mode: 'cors',
@@ -40,7 +40,7 @@ async function postData(){
   console.log(jsonData);
 
   if (jsonData.state == 'ON') {
-    button.classList.remove('css_wait');   
+    button.classList.remove('css_wait');
     button.classList.add('css_on');
     button.innerHTML = 'LED ON';
   } else {

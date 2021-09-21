@@ -3,6 +3,7 @@
   padding: 20px 40px;
   font-size: 20px;
   border-radius: 32px;
+  width: 10em;
 }
 
 #center {
@@ -26,6 +27,6 @@
 }
 
 .css_wait {
-  background-color: gray;
+  background-color: #b6b6b6;
   color: black;
 }
