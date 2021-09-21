@@ -25,7 +25,7 @@ app.post('/api', (request, response) => {
   const res = { 
     state: data.state,
     serverEpoch: serverEpoch,
-    roundTrip: serverEpoch - data.clientEpoch + 'mS'
+    roundTripInMilliSec: serverEpoch - data.clientEpoch
   }
   response.json(res);
 });

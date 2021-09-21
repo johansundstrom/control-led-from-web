@@ -24,6 +24,9 @@ async function postData(){
 
   const response = await fetch('/api', options);
   const jsonData = await response.json();
+
+  //template literals - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+  document.getElementById('info').innerText = `Element updated after ${jsonData.roundTripInMilliSec}mS`;
   
   console.log(jsonData);
 
