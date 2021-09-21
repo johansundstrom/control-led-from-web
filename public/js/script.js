@@ -15,7 +15,7 @@ async function postData() {
 
   button.classList.remove('css_off', 'css_on');
   button.classList.add('css_wait');
-  button.innerHTML = 'WAIT';
+  button.innerHTML = 'WORKING';
 
   //   datalast
   if (myData.state == 'OFF') {
