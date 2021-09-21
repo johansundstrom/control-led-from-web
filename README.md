@@ -130,3 +130,10 @@ app.listen(port, function() {
  console.log('Open: http://localhost:' + port);
 });
 ```
+
+## Publicera på Heroku
+
+* logga in på heroku ```heroku login```
+* skapa plats på heroku ```heroku create```
+* flytta upp till heroku ```git push heroku main```
+* se resultat ```heroku open```
