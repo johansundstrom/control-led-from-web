@@ -21,8 +21,6 @@ async function postData() {
   myData.clientEpoch = epoch;
   //   /datalast
 
-  console.log(myData.state);
-
   //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
   const options = {
     method: 'POST',
