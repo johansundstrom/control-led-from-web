@@ -1,10 +1,17 @@
 "use strict";   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 
 let myData = { state: 'OFF' };
+let host;
 
 async function postData() {
 
   const button = document.querySelector("#button");
+
+  if (location.host == 'cryptic-meadow-42908.herokuapp.com') {
+    host = 'Region: United States'
+  } else {
+    host = 'Localhost';
+  }
 
   button.classList.remove('css_off', 'css_on');
   button.classList.add('css_wait');
@@ -33,7 +40,7 @@ async function postData() {
   const jsonData = await response.json();
 
   //template literals - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-  document.getElementById('info').innerText = `Element updated ${jsonData.roundTripInMilliSec}mS after being clicked`;
+  document.getElementById('info').innerText = `Clicked element updated after ${jsonData.roundTripInMilliSec}mS roundtrip from ${host}`;
 
   console.log(jsonData);
 
