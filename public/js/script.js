@@ -26,7 +26,7 @@ async function postData(){
   const jsonData = await response.json();
 
   //template literals - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-  document.getElementById('info').innerText = `Element updated after ${jsonData.roundTripInMilliSec}mS`;
+  document.getElementById('info').innerText = `Element updated ${jsonData.roundTripInMilliSec}mS after being clicked`;
   
   console.log(jsonData);
 
