@@ -31,6 +31,12 @@
 </div>
 ```
 
+Observera alternativet till att anropa ```... onclick="postData()"...````
+
+```javascript
+button.addEventListener('click', postData);
+```
+
 * Ge knappen stil
 
 * https://www.css3buttongenerator.com 
