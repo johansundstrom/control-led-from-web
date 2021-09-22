@@ -31,7 +31,7 @@
 </div>
 ```
 
-Observera alternativet till att anropa ```... onclick="postData()"...````
+Observera alternativet till att anropa ```... onclick="postData()"...```
 
 ```javascript
 button.addEventListener('click', postData);
